@@ -9,11 +9,13 @@ game.import("extension", function(lib, game, ui, get, ai, _status) {
 	}
 
 	const fs = require("fs");
+	const { versions } = process;
+	const electronVersion = parseFloat(versions.electron);
 	let remote;
-	if (!('remote' in require('electron'))) {
+	if (electronVersion >= 14) {
 		remote =  require('@electron/remote');
 	} else {
-		remote = require('electron');
+		remote = require('electron').remote;
 	}
 	const { dialog, BrowserWindow } = remote;
 	const path = require('path');
