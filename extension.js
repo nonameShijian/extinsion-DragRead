@@ -9,13 +9,13 @@ game.import("extension", function(lib, game, ui, get, ai, _status) {
 	}
 
 	const fs = require("fs");
-	const {
-		remote
-	} = require('electron');
-	const {
-		dialog,
-		BrowserWindow
-	} = remote;
+	let remote;
+	if (!('remote' in require('electron'))) {
+		remote =  require('@electron/remote');
+	} else {
+		remote = require('electron');
+	}
+	const { dialog, BrowserWindow } = remote;
 	const path = require('path');
 	const body = document.body;
 	let loadCSS = false;
@@ -673,7 +673,7 @@ game.import("extension", function(lib, game, ui, get, ai, _status) {
 			author: "诗笺",
 			diskURL: "",
 			forumURL: "",
-			version: "1.74",
+			version: "1.75",
 		},
 		files: {
 			"character": [],
