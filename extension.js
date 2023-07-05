@@ -417,7 +417,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 						lib.init.css(lib.assetURL + "extension/拖拽读取", "extension");
 						loadCSS = true;
 					}
-					fetch(__dirname + '/extension/拖拽读取/updateContent.md')
+					fetch(__dirname + '/extension/拖拽读取/README.md')
 						.then(response => response.text()).then(txt => {
 							let layer = ui.create.div(ui.window, '.updateContent');
 							let close = ui.create.div(layer, '.updateContentClose', () => {
