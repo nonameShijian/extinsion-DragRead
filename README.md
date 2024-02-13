@@ -1,5 +1,13 @@
 扩展介绍: 无名杀windows电脑版专属扩展，把zip（离线包，扩展或素材压缩包）拖入到游戏内即可导入
 <pre style="color:rgb(210,210,000); font-size:25px; line-height:20px; text-shadow: 0 0 2px black;">
+v3.0更新内容:
+
+———支持通过info.json识别扩展信息
+
+v2.1更新内容:
+
+———支持异步game.import
+
 v2.0更新内容:
 
 ———重新选用npm解压库
